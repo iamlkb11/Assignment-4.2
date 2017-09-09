@@ -1,0 +1,44 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: yellow;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+@mixin custom-border-radius($radius)
+	{
+	-webkit-border-radius:$radius;
+		-moz-border-radius:$radius;
+			-ms-border-radius:$radius;
+				border-radius:$radius;
+	}
+
+.st
+	{
+	width:100px;
+	margin: 0 auto;
+	}
+
+
+.box
+	{
+	background-color:red;
+	padding:40px 20px;
+	text-align:centre;
+	}
+
+.box1
+	{
+	@include custom-border-radius(20px);
+	} 
+
+.box2
+	{
+	@include custom-border-radius(20px 40px);
+	}
+	
+.box3
+	{
+	@include custom-border-radius(20px 40px 80px);
+	}

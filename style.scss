@@ -1,0 +1,59 @@
+@import '_var';
+
+
+body {
+  font-family: $primaryFont;
+  color: $primary-color;
+}
+
+@mixin custom-border-radius($radius)
+	{
+	-webkit-border-radius:$radius;
+		-moz-border-radius:$radius;
+			-ms-border-radius:$radius;
+				border-radius:$radius;
+	}
+
+.st
+	{
+	width:200px;
+	margin: 0 auto;
+	}
+
+
+.box
+	{
+	background-color:black;
+	padding:20px 20px;
+	text-align:centre;
+	}
+
+.box1
+	{
+	@include custom-border-radius(20px);
+	} 
+
+.box2
+	{
+	@include custom-border-radius(20px 40px);
+	}
+	
+.box3
+	{
+	@include custom-border-radius(20px 40px 80px);
+	}
+	
+	
+.systemMsg
+	{
+	padding:20px;
+	border-radius:20px;
+	}
+
+.success
+	{
+	background-color:yellow;
+	font-size:20px;
+	@extend .systemMsg;
+	}
+	
